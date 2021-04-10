@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.4 on win32)" generated="20210410 22:25:53.997" rpa="false" schemaversion="2">
+<suite id="s1" name="TestCases" source="C:\Users\kgurusam\PycharmProjects\MyRobotFramework\TestCases">
+<suite id="s1-s1" name="Mytest" source="C:\Users\kgurusam\PycharmProjects\MyRobotFramework\TestCases\mytest.robot">
+<test id="s1-s1-t1" name="TC01">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Starting TC01</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210410 22:25:54.311" endtime="20210410 22:25:54.312"/>
+</kw>
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210410 22:25:54.314" level="INFO">Opening browser 'Chrome' to base url 'http://demo.guru99.com/telecom/index.html'.</msg>
+<status status="PASS" starttime="20210410 22:25:54.313" endtime="20210410 22:26:00.114"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210410 22:26:00.115" endtime="20210410 22:26:00.259"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://h3/*[text()='Add Customer']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210410 22:26:00.260" endtime="20210410 22:26:00.348"/>
+</kw>
+<status status="PASS" starttime="20210410 22:25:54.313" endtime="20210410 22:26:00.348"/>
+</kw>
+<kw name="Navigate to Add Customer">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://h3/*[text()='Add Customer']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:00.350" level="INFO">Clicking link 'xpath://h3/*[text()='Add Customer']'.</msg>
+<status status="PASS" starttime="20210410 22:26:00.349" endtime="20210410 22:26:00.978"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210410 22:26:01.023" level="INFO">${title} = Guru99 Telecom Add Customer</msg>
+<status status="PASS" starttime="20210410 22:26:00.978" endtime="20210410 22:26:01.023"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Title:${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210410 22:26:01.023" endtime="20210410 22:26:01.024"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Add Customer</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210410 22:26:01.024" endtime="20210410 22:26:01.025"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:00.348" endtime="20210410 22:26:01.025"/>
+</kw>
+<kw name="Add Customer Fill Details">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[text()='Done']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:01.027" level="INFO">Clicking element 'xpath://*[text()='Done']'.</msg>
+<status status="PASS" starttime="20210410 22:26:01.026" endtime="20210410 22:26:01.109"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:fname</arg>
+<arg>Karthik</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:01.110" level="INFO">Typing text 'Karthik' into text field 'id:fname'.</msg>
+<status status="PASS" starttime="20210410 22:26:01.110" endtime="20210410 22:26:01.283"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:lname</arg>
+<arg>Guru</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:01.284" level="INFO">Typing text 'Guru' into text field 'id:lname'.</msg>
+<status status="PASS" starttime="20210410 22:26:01.284" endtime="20210410 22:26:01.423"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>erkarthik.g@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:01.423" level="INFO">Typing text 'erkarthik.g@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20210410 22:26:01.423" endtime="20210410 22:26:01.711"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://textarea[@id='message']</arg>
+<arg>MyAddress MyStreet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:01.712" level="INFO">Typing text 'MyAddress MyStreet' into text field 'xpath://textarea[@id='message']'.</msg>
+<status status="PASS" starttime="20210410 22:26:01.711" endtime="20210410 22:26:02.013"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:telephoneno</arg>
+<arg>9894979899</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:02.014" level="INFO">Typing text '9894979899' into text field 'id:telephoneno'.</msg>
+<status status="PASS" starttime="20210410 22:26:02.013" endtime="20210410 22:26:02.285"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:01.026" endtime="20210410 22:26:02.285"/>
+</kw>
+<kw name="Add Customer Click Submit And Verify Success">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:02.289" level="INFO">Clicking button 'name:submit'.</msg>
+<status status="PASS" starttime="20210410 22:26:02.289" endtime="20210410 22:26:03.145"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${CustomerID}</var>
+<arg>xpath://h3</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:03.204" level="INFO">${CustomerID} = 749339</msg>
+<status status="PASS" starttime="20210410 22:26:03.145" endtime="20210410 22:26:03.204"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CustomerID}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210410 22:26:03.205" level="INFO">${CustomerID} = 749339</msg>
+<status status="PASS" starttime="20210410 22:26:03.204" endtime="20210410 22:26:03.205"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>CustomerID:${CustomerID}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210410 22:26:03.205" endtime="20210410 22:26:03.207"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:02.287" endtime="20210410 22:26:03.207"/>
+</kw>
+<kw name="Navigate to HOME">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://ul[@class='actions']/..//*[text()='Home']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:03.208" level="INFO">Clicking element 'xpath://ul[@class='actions']/..//*[text()='Home']'.</msg>
+<status status="PASS" starttime="20210410 22:26:03.208" endtime="20210410 22:26:03.499"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:03.207" endtime="20210410 22:26:03.500"/>
+</kw>
+<status status="PASS" starttime="20210410 22:25:54.311" endtime="20210410 22:26:03.501"/>
+</test>
+<test id="s1-s1-t2" name="TC02">
+<kw name="Navigate to Pay Billing">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://h3/*[text()='Pay Billing']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:03.517" level="INFO">Clicking element 'xpath://h3/*[text()='Pay Billing']'.</msg>
+<status status="PASS" starttime="20210410 22:26:03.517" endtime="20210410 22:26:03.990"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${titlePayBilling}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210410 22:26:04.007" level="INFO">${titlePayBilling} = Guru99 Telecom Billing</msg>
+<status status="PASS" starttime="20210410 22:26:03.990" endtime="20210410 22:26:04.007"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Title:${titlePayBilling}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210410 22:26:04.008" endtime="20210410 22:26:04.009"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${titlePayBilling}</arg>
+<arg>Billing</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210410 22:26:04.009" endtime="20210410 22:26:04.009"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:03.516" endtime="20210410 22:26:04.009"/>
+</kw>
+<kw name="Go to Billing Details Page">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:customer_id</arg>
+<arg>${CustomerID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:04.010" level="INFO">Typing text '749339' into text field 'id:customer_id'.</msg>
+<status status="PASS" starttime="20210410 22:26:04.010" endtime="20210410 22:26:04.168"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:04.169" level="INFO">Clicking button 'name:submit'.</msg>
+<status status="PASS" starttime="20210410 22:26:04.169" endtime="20210410 22:26:04.629"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://*[text()='Free Usage Limit']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210410 22:26:04.708" level="INFO">Element 'xpath://*[text()='Free Usage Limit']' is displayed.</msg>
+<status status="PASS" starttime="20210410 22:26:04.630" endtime="20210410 22:26:04.708"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:04.010" endtime="20210410 22:26:04.709"/>
+</kw>
+<kw name="Get Total Billing Amount">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TotalAmount}</var>
+<arg>xpath://*[text()='Total Bill']/ancestor::tr/td[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210410 22:26:04.747" level="INFO">${TotalAmount} = 750</msg>
+<status status="PASS" starttime="20210410 22:26:04.710" endtime="20210410 22:26:04.747"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Total Amount:${TotalAmount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210410 22:26:04.747" endtime="20210410 22:26:04.748"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:04.709" endtime="20210410 22:26:04.748"/>
+</kw>
+<status status="PASS" starttime="20210410 22:26:03.513" endtime="20210410 22:26:04.749"/>
+</test>
+<status status="PASS" starttime="20210410 22:25:54.035" endtime="20210410 22:26:04.752"/>
+</suite>
+<status status="PASS" starttime="20210410 22:25:54.000" endtime="20210410 22:26:04.758"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Mytest">TestCases.Mytest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
